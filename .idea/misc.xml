@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.353" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.353" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_baja.xml" value="0.264" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_clientes.xml" value="0.264" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_editar.xml" value="0.25" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_listado.xml" value="0.264" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_main_menu.xml" value="0.264" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/layout/activity_reparaciones.xml" value="0.3625" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/menu/main_menu.xml" value="0.264" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1685" />
+        <entry key="..\:/Users/USER-3221/AndroidStudioProjects/Gestion_Clientes/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1685" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

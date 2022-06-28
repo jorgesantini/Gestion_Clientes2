@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a2"
+    android:orientation="vertical"
+    tools:context=".EditarActivity">
+
+    <TextView
+        android:id="@+id/tx_tituloEditarCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/white"
+        android:text="EDITAR CLIENTE"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tx_tiutloListaSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:text="SELECCIONE DE LA LISTA EL CLIENTE"
+        android:textColor="@color/white" />
+
+    <Spinner
+        android:id="@+id/sp_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="80sp"
+        android:layout_marginBottom="10sp"
+        android:backgroundTint="@color/white"
+        android:contextClickable="true"
+        android:foregroundTint="@color/purple_200"
+        android:foregroundTintMode="screen"
+        android:scrollbarSize="10sp"
+        android:text="CLICK"
+        android:textAlignment="center"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tx_nombreCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:text="Nombre del Cliente"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/ed_nombreCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:ems="10"
+        android:hint="?"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tx_apellidoCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:text="Apellido del Cliente"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/ed_apellidoCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:ems="10"
+        android:hint="?"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/tx_instrumental"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:text="Instrumental a reparar"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/ed_instrumental"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:hint="?"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tx_costo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:text="Importe"
+        android:textColor="@color/white" />
+
+    <EditText
+        android:id="@+id/ed_costo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <Button
+        android:id="@+id/bt_editarCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:text="GUARDAR EDICION" />
+
+
+</LinearLayout>

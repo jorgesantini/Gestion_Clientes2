@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a4"
+    android:orientation="vertical"
+    tools:context=".ListadoActivity">
+
+
+    <TextView
+        android:id="@+id/tx_tituloListado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:text="LISTADO DE CLIENTES"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bt_listarClientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Listar Clientes" />
+
+    <ListView
+        android:id="@+id/lv_listado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:cacheColorHint="@color/white">
+
+    </ListView>
+</LinearLayout>

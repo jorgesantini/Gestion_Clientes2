@@ -34,39 +34,6 @@ class ListadoActivity : AppCompatActivity() {
                 lv_listado.adapter = adapter
             }
 
-            //Click en el listado para borrar el cliente seleccionado
-            lv_listado.setOnItemClickListener { parent, view, position, id ->
-
-                val clienteSeleccionado: String = parent.getItemAtPosition(position).toString()
-                val alert = AlertDialog.Builder(this)
-                alert.setMessage("Quiere BORRAR el cliente seleccionado?")
-                    .setCancelable(false)
-
-                    //Click en Si
-                    .setPositiveButton("Si") { _: DialogInterface, _: Int ->
-
-                        val dbe = helper.writableDatabase
-                        dbe.execSQL("DELETE FROM CLIENTES WHERE CSURNAME='"+clienteSeleccionado+"'")
-
-                        Toast.makeText(
-                            applicationContext,
-                            "CLIENTE $clienteSeleccionado BORRADO ",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-
-
-                    //Click en No
-                    .setNegativeButton("No") { Dialog: DialogInterface, _: Int ->
-                        Dialog.cancel()
-                    }
-
-                //ventana flotante con botones
-                val alertaFlotante: AlertDialog = alert.create()
-                alertaFlotante.setTitle("BORRADO")
-                alertaFlotante.show()
-            }
-
             }
         }
     }

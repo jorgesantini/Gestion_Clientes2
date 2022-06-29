@@ -50,9 +50,9 @@ class EditarActivity : AppCompatActivity() {
             if (data.moveToFirst()) {
                 do {
                     clienteEncontradoNombre.add((data.getString(1))) // Agrego el nombre del cliente desde la bd al array.
-                    clienteEncontradoApellido.add((data.getString(2))) // Agrego el nombre del cliente desde la bd al array.
-                    clienteEncontradoInstrumental.add((data.getString(3))) // Agrego el nombre del cliente desde la bd al array.
-                    clienteEncontradoCosto.add((data.getString(4))) // Agrego el nombre del cliente desde la bd al array.
+                    clienteEncontradoApellido.add((data.getString(2))) // Agrego el apellido del cliente desde la bd al array.
+                    clienteEncontradoInstrumental.add((data.getString(3))) // Agrego el instrumental del cliente desde la bd al array.
+                    clienteEncontradoCosto.add((data.getString(4))) // Agrego el monto del cliente desde la bd al array.
                 } while (data.moveToNext())
 
                 val adapter =
@@ -71,11 +71,7 @@ class EditarActivity : AppCompatActivity() {
         }
 
 
-        ///////////////////////////////////////////////////////////////////
-        // RUTINA /////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////////////
-        //INSTANCIAMOS METODO SPINNER /////////////////////////////////////
-
+        //INSTANCIAMOS METODO SPINNER
 
                 spinner()
 
@@ -133,7 +129,7 @@ class EditarActivity : AppCompatActivity() {
                 //Aviso de creacion satisfactoria de usuario
 
                 Toast.makeText(applicationContext, "CLIENTE: '$clienteSpinnerApellido' FUE MODIFICADO", Toast.LENGTH_SHORT).show()
-                // ANDA, muestra el toast con el nombre modificado
+                // Muestra el toast con el nombre modificado
 
             //RECARGAR ACTIVITY PARA ACTUALIZAR SPINNER
 

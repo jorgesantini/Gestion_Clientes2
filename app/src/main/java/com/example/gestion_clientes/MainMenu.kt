@@ -1,5 +1,7 @@
 package com.example.gestion_clientes
 
+import android.app.DownloadManager
+import android.app.VoiceInteractor
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +10,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import kotlin.system.exitProcess
 
 class MainMenu : AppCompatActivity() {
@@ -18,9 +25,34 @@ class MainMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
-        val usuario:String = intent.getStringExtra("Usuario").toString() // Recuperamos al USER del putExtra anterior
-        tx_nombre_menu=findViewById(R.id.tx_nombreMenu)
+        val usuario: String =
+            intent.getStringExtra("Usuario").toString() // Recuperamos al USER del putExtra anterior
+        tx_nombre_menu = findViewById(R.id.tx_nombreMenu)
         tx_nombre_menu.text = usuario
+
+        dolar()
+
+    }
+
+    fun dolar() {
+        val textDolar = findViewById<TextView>(R.id.tx_valorDolar)
+        val url = "https://free.currconv.com/api/v7/convert?q=USD_ARS&compact=ultra&apiKey=993890542ee7a1210956"
+        //val url = "http://free.currencyconverterapi.com/api/v5/convert?q=USD_ARS&compact=ultra"
+
+        val queue = Volley.newRequestQueue(this)
+
+        val stringRequest = StringRequest(
+            Request.Method.GET, url,
+            { response ->
+                "${response}".also { textDolar.text = it }
+                //"El valor de Dolar hoy es: ${response.toString()}".also { textDolar.text = it }
+               // textDolar.text = "El valor de Dolar hoy es: ${response.toString()}"
+            },
+            { error ->
+                textDolar.text = "No se obtuvieron datos"
+                error.printStackTrace()
+            })
+        queue.add(stringRequest)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

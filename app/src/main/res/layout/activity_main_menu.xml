@@ -26,4 +26,26 @@
         android:textColor="@color/white"
         android:textSize="34sp" />
 
+    <TextView
+        android:id="@+id/tx_tituloDolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginTop="35sp"
+        android:layout_marginBottom="5sp"
+        android:text="Dolar Hoy:"
+        android:textColor="@color/white"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/tx_valorDolar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="10sp"
+        android:text="valor dolar por api"
+        android:textColor="@color/white"
+        android:textSize="27sp" />
+
 </LinearLayout>

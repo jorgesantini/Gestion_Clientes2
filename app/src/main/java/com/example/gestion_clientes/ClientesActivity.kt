@@ -29,26 +29,33 @@ class ClientesActivity : AppCompatActivity() {
         //PERSISTIMOS EN BASE DE DATOS AL CLIENTE
 
         bt_botonAltaCliente.setOnClickListener{
-            val cv = ContentValues()
-            cv.put("CNAME", ed_nombreCliente.text.toString())
-            cv.put("CSURNAME", ed_apellidoCliente.text.toString())
-            cv.put("REP", ed_instrumental.text.toString())
-            cv.put("COST", ed_costo.text.toString())
 
-            db.insert("CLIENTES", null, cv)
+            if(ed_nombreCliente.text.toString().isEmpty() || ed_apellidoCliente.text.toString().isEmpty()
+                || ed_instrumental.text.toString().isEmpty() ||ed_costo.text.toString().isEmpty() ) {
+                Toast.makeText(applicationContext,"LOS CAMPOS NO PUEDEN ESTAR VACIOS", Toast.LENGTH_LONG).show()
+            }
+            else{
+                val cv = ContentValues()
+                cv.put("CNAME", ed_nombreCliente.text.toString())
+                cv.put("CSURNAME", ed_apellidoCliente.text.toString())
+                cv.put("REP", ed_instrumental.text.toString())
+                cv.put("COST", ed_costo.text.toString())
 
-            //Limpia pantalla y enfoca en edit user
+                db.insert("CLIENTES", null, cv)
 
-            ed_nombreCliente.setText("")
-            ed_apellidoCliente.setText("")
-            ed_instrumental.setText("")
-            ed_costo.setText("")
+                //Limpia pantalla y enfoca en edit user
 
-            ed_nombreCliente.requestFocus()
+                ed_nombreCliente.setText("")
+                ed_apellidoCliente.setText("")
+                ed_instrumental.setText("")
+                ed_costo.setText("")
 
-            //Aviso de creacion satisfactoria de usuario
+                ed_nombreCliente.requestFocus()
 
-            Toast.makeText(applicationContext,"CLIENTE REGISTRADO", Toast.LENGTH_LONG).show()
+                //Aviso de creacion satisfactoria de usuario
+
+                Toast.makeText(applicationContext, "CLIENTE REGISTRADO", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }

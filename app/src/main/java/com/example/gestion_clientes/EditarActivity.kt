@@ -58,7 +58,8 @@ class EditarActivity : AppCompatActivity() {
                 val adapter =
                     ArrayAdapter(
                         this,
-                        android.R.layout.simple_spinner_item,
+                        //android.R.layout.simple_spinner_item,
+                        R.layout.spinner_items,
                         clienteEncontradoApellido.toList()
                     )
 

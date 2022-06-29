@@ -36,6 +36,7 @@
         android:layout_marginEnd="80sp"
         android:layout_marginBottom="10sp"
         android:contextClickable="true"
+        android:dropDownSelector="@color/purple_500"
         android:text="CLICK"
         android:textAlignment="center"
         tools:visibility="visible" />
@@ -54,7 +55,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
         android:ems="10"
-        android:hint="?"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/white" />
@@ -73,7 +73,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
         android:ems="10"
-        android:hint="?"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/white" />
@@ -92,7 +91,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10sp"
-        android:hint="?"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/white" />

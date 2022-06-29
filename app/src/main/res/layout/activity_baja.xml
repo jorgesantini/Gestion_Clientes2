@@ -17,6 +17,16 @@
         android:backgroundTint="@color/black"
         android:text="BAJA DE CLIENTES"
         android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tx_descripcionBaja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15sp"
+        android:backgroundTint="@color/black"
+        android:text="Seleccione el cliente a eliminar:"
+        android:textColor="@color/black"
         android:textSize="24sp" />
 
 

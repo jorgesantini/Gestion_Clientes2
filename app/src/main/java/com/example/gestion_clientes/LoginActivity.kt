@@ -13,7 +13,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        //Declaramos las variables
+        //DECLARAMOS LAS VARIABLES
 
         var bt_buttonRegister = findViewById<Button>(R.id.bt_buttonRegister)
         var bt_buttonlogin = findViewById<Button>(R.id.bt_buttonLogin)
@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
         var helper =MyDBHelper(applicationContext)
         var db = helper.readableDatabase
 
-        //Escuchamos al boton REGISTER
+        //ESCUCHAMOS AL BOTON REGISTER
 
         bt_buttonRegister.setOnClickListener{
 
@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
                 ed_password.setText("")
                 ed_loginUser.requestFocus()
 
-                //Aviso de creacion satisfactoria de usuario
+                //AVISO DE CREACION SATISFACTORIA DE USUARIO
 
                 Toast.makeText(applicationContext,"USUARIO REGISTRADO", Toast.LENGTH_LONG).show()
             }
@@ -56,7 +56,7 @@ class LoginActivity : AppCompatActivity() {
 
         bt_buttonlogin.setOnClickListener{
 
-            // Chequeamos que los campos no esten vacios.
+            // CHEQUEAMOS QUE LOS CAMPOS NO ESTEN VACIOS
 
             if(ed_loginUser.text.toString().isEmpty() || ed_password.text.toString().isEmpty()){
                 Toast.makeText(applicationContext,"LOS CAMPOS NO PUEDEN ESTAR VACIOS", Toast.LENGTH_LONG).show()
@@ -73,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
                     openCliente.putExtra("Usuario", ed_loginUser.text.toString()) // Nos llevamos al USER con el putExtra
                     startActivity(openCliente)
 
-                    // Para que no vuelva a la pantalla LOGIN
+                    // pARA QUE NO VUELVA A LA PANTALLA LOGIN
                     finish()
                 }
 
